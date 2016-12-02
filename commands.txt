@@ -1,0 +1,19 @@
+#user_interests
+cd user_interests
+./createTable.sh
+./buildandrun.sh
+#events
+cd events/TF_IDF
+./rebuild.sh
+./rerun.sh -Dmapreduce.job.reduces=2
+cd ../LoadEvents/
+./createTable.sh
+./rebuild.sh
+./rerun.sh -Dmapreduce.job.reduces=2
+
+#Recommendation
+./build.sh
+
+#The following script was used for the demo, but it does show how the script should be run 
+./recommend.sh "homer" "Half Dome day hike"
+./recommend.sh "homer" "Bollywood night"
