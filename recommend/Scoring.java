@@ -64,7 +64,8 @@ class Scoring
 		    String incomingEventData = Bytes.toString(eventDataResults.getValue(Bytes.toBytes("description"),Bytes.toBytes("vector")));
 		    String[] incomingEventVectorString = incomingEventData.split(",");
 		    incomingEventVector = new Double[incomingEventVectorString.length];
-
+			
+		    //TODO: Change this to return map instead of an array to help easily deal with sparse vectors
 		    for (int count = 0; count < incomingEventVectorString.length; count++) {
 		        incomingEventVector[count] = Double.parseDouble(incomingEventVectorString[count]);
 		    }
