@@ -23,5 +23,5 @@ if [ "$result" == "true" ]; then
 elif [ "$result" == "false" ]; then
     echo "$userName may not like to attend the $event"
 else
-    echo "Unable to recommend anything for $user"
+    echo "Unable to recommend anything for $userName"
 fi
