@@ -46,7 +46,7 @@ You will need a hadoop environment with HBase setup to run this project.
  ./build.sh
  ```
 
- * Run recommend.sh. (Has hardcoded eventIds and userId used for a demo).
+ * Run recommend.sh.
   ```
   ./recommend.sh "homer" "Half Dome day hike"
   ./recommend.sh "homer" "Bollywood night"
